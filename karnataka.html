@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Web Page</title>
+    <link rel="stylesheet" href="tamilnadu.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Image -->
+    <div class="relative">
+        <img src="E:\yieldwise\pro\State pic.png" class="w-full h-64 object-cover" src="https://storage.googleapis.com/a1aa/image/9DP2aHmS_gxA8uWNBIYlE-ID8Lzs_dOCwZmcN-eX2FM.jpg"/>
+    </div>
+    <!-- Navigation Bar -->
+    <div class="bg-gray-100 text-black flex justify-center items-center py-2 space-x-4">
+        <a class="flex items-center space-x-2" href="#">
+            <i class="fas fa-rupee-sign"></i>
+            <span>Price Prediction</span>
+        </a>
+        <a class="flex items-center space-x-2" href="#">
+            <i class="fas fa-chart-line"></i>
+            <span>Price Trend</span>
+        </a>
+    </div>
+    <!-- Filter Section -->
+    <div class="bg-teal-800 text-white p-4 flex flex-wrap justify-center space-x-4">
+        <div class="flex flex-col items-center">
+            <label class="mb-1" for="state">STATE</label>
+            <select class="p-2 rounded text-black" id="state">
+                <option value="Karnataka">Karnataka</option>
+            </select>
+        </div>
+        <div class="flex flex-col items-center">
+            <label class="mb-1" for="commodity">COMMODITY</label>
+            <select class="p-2 rounded text-black" id="commodity"></select>
+        </div>
+        <div class="flex items-center">
+            <button class="bg-gray-700 p-2 rounded text-white" id="goButton">Go</button>
+        </div>
+    </div>
+   
+    <!-- Additional Content Section -->
+    <div class="bg-white p-8 mt-4 shadow-md rounded-lg mx-4" id="outputSection" style="display: none;">
+        <h2 class="text-2xl font-bold text-center mb-4">Predicted Price</h2>
+        <p class="text-center text-gray-700 mb-4" id="predictedPrice"></p>
+    </div>
+
+    <!-- Additional Section Below Commodity Bar -->
+    <div class="bg-white p-8 mt-4 shadow-md rounded-lg mx-4">
+        <h2 class="text-2xl font-bold text-center mb-4">Month wise growth vs Sales Prediction </h2>
+        <div class="flex flex-col items-center space-y-4">
+            <div class="flex items-center space-x-2">
+                <label for="monthlyCommodity" class="font-semibold">Commodity</label>
+                <select id="monthlyCommodity" class="p-2 border rounded">
+                    <option>Select Commodity</option>
+                        <option value="Onion">Onion</option>
+                        <option value="Potato">Potato</option>
+                        <option value="Tomato">Tomato</option>
+                        <option value="Asparagus">Asparagus</option>
+                        <option value="Bamboo Shoot">Bamboo Shoot</option>
+                        <option value="Brinjal Long">Brinjal Long</option>
+                        <option value="Brinjal Round">Brinjal Round</option>
+                        <option value="Brinjal">Brinjal</option>
+                        <option value="Broad Leaf Mustard">Broad Leaf Mustard</option>
+                        <option value="Broccoli">Broccoli</option>
+                        <option value="Brussels Sprout">Brussels Sprout</option>
+                        <option value="Cabbage">Cabbage</option>
+                        <option value="Cabbage (Local)">Cabbage (Local)</option>
+                        <option value="Carrot">Carrot</option>
+                        <option value="Carrot (Local)">Carrot (Local)</option>
+                        <option value="Cauliflower (Local)">Cauliflower (Local)</option>
+                        <option value="Chilli">Chilli</option>
+                        <option value="Chilli Green (Bullet)">Chilli Green (Bullet)</option>
+                        <option value="Fenugreek Leaf">Fenugreek Leaf</option>
+                        <option value="Fenugreek">Fenugreek</option>
+                        <option value="French Bean (Hybrid)">French Bean (Hybrid)</option>
+                        <option value="Garlic Dry Chinese">Garlic Dry Chinese</option>
+                        <option value="Garlic">Garlic</option>
+                        <option value="Ginger">Ginger</option>
+                        <option value="Green Beans">Green Beans</option>
+                        <option value="Green Peas">Green Peas</option>
+                        <option value="Jackfruit">Jackfruit</option>
+                        <option value="Leek">Leek</option>
+                        <option value="Mango (Maldah)">Mango (Maldah)</option>
+                        <option value="Mushroom (Kanya)">Mushroom (Kanya)</option>
+                        <option value="Mustard Greens">Mustard Greens</option>
+                        <option value="Mustard Leaf">Mustard Leaf</option>
+                        <option value="Okra">Okra</option>
+                        <option value="Peas">Peas</option>
+                        <option value="Pointed Guard">Pointed Guard</option>
+                        <option value="Raddish Red">Raddish Red</option>
+                        <option value="Raddish White (Local)">Raddish White (Local)</option>
+                        <option value="Rhubarb">Rhubarb</option>
+                        <option value="Smooth Gourd">Smooth Gourd</option>
+                        <option value="Soybean Green">Soybean Green</option>
+                        <option value="Spinach Leaf">Spinach Leaf</option>
+                        <option value="Sponge Gourd">Sponge Gourd</option>
+                        <option value="Squash (Long)">Squash (Long)</option>
+                        <option value="Sugarcane">Sugarcane</option>
+                        <option value="Sweet potato">Sweet potato</option>
+                        <option value="Turnip A">Turnip A</option>
+                    
+                </select>
+            </div>
+            <div class="flex space-x-4 mt-4">
+                <button class="bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-600" id="submitMonthly">Submit</button>
+                <button class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-400" id="resetMonthly">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graph Section -->
+    <!-- Graph Section -->
+<div class="bg-white p-8 mt-4 shadow-md rounded-lg mx-4" id="graphSection" style="display: none;">
+    <h2 class="text-2xl font-bold text-center mb-4">Monthly Price Trend</h2>
+    <img id="monthlyGraphImg" src="" alt="Monthly Price Trend" class="w-full h-auto mx-auto border rounded-lg shadow-md">
+</div>
+
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white text-center py-4 mt-4"></footer>
+
+    <script src="karnataka.js"></script>
+    <script src="monthlyGraph.js"></script>
+</body>
+</html>
+

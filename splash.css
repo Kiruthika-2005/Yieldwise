@@ -1,0 +1,40 @@
+/* Full-screen container */
+.splash-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Blurred background using ::before */
+.splash-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.mangeons-local.bzh/wp-content/uploads/radis-noir-vente.jpg '); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Slightly reduced blur */
+    z-index: -1;
+}
+
+/* Keeps the logo sharp and centered */
+.splash-logo {
+    width: 300px;
+    height: auto;
+    position: relative;
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Zoom effect for logo */
+.zoom-expand {
+    transform: scale(5); /* Logo zooms out */
+    opacity: 0;
+}

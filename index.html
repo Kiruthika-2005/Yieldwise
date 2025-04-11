@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yieldwise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-green-900 text-white">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <img src="E:\yieldwise\pro\LOGO.png" alt="Live Organic Logo" class="h-20 w-20" />
+                <span class="ml-2 text-2xl text-gray-100" style="text-shadow: 2px 2px 5px #131313;">YIELDWISE</span>
+
+            </div>
+            <div class="flex items-center space-x-4">
+                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-md" />
+                <select class="px-4 py-2 rounded-md">
+                    <option>All</option>
+                </select>
+                <button class="bg-green-500 px-4 py-2 rounded-md">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto py-4 px-6">
+        <p></p>
+    </div>
+
+    <!-- Banner -->
+    <div class="container mx-auto banner">
+        <img src="E:\yieldwise\pro\front page pic 1.png" alt="Basket of fruits and vegetables"
+            class="w-full h-80 object-cover" />
+        <img src="E:\yieldwise\pro\front page pic 2.png" alt="Fresh vegetables"
+            class="w-full h-80 object-cover hidden" />
+        <!-- <img src="C:\Users\Dell\Downloads\WhatsApp Image 2025-03-19 at 09.35.02.jpeg" alt="Organic fruits"
+            class="w-full h-80 object-cover hidden" />
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold"> -->
+            <!-- Select Your State -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto py-8 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- State List -->
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\tamilpic.png" alt="Tamil Nadu"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('tamilnadu.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Tamil Nadu
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\keralapic.png" alt="Kerala"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('kerala.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Kerala
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\Karnatakapic.png" alt="Karnataka"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('karnataka.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Karnataka
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\Odishapic.png" alt="Odisha"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('odisha.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Odisha
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\andrapic.png" alt="Andhra Pradesh"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('andhra pradhesh.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Andhra Pradesh
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\maharastrapic.png" alt="Maharashtra"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('maharastra.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Maharashtra
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src=E:\yieldwise\pro\UTTARPIC.jpeg alt="Assam"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('uttar.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Uttarpradesh
+                </button>
+            </div>
+
+            <div class="border p-4 rounded-md">
+                <img src="E:\yieldwise\pro\madhyapic.png" alt="Madhya Pradesh"
+                    class="w-full h-52 object-contain" />
+                <button onclick="navigateTo('madhya pradhesh.html')" class="bg-green-800 text-white px-4 py-2 rounded-md mt-2 w-full">
+                    Madhya Pradesh
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
